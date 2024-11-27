@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo_db
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    csrf:
+      enabled: true
+      use-local-storage: true
